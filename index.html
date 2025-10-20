@@ -1,60 +1,224 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sky Utama Kontraktor</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SKY UTAMA KONTRAKTOR</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome untuk icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous"/>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header>
-    <div class="navbar">
-      <button class="nav-toggle" onclick="toggleMenu()">☰ Menu</button>
-      <div class="nav-menu" id="navMenu">
-        <a href="#beranda" onclick="closeMenu()">Beranda</a>
-        <a href="#layanan" onclick="closeMenu()">Layanan</a>
-        <a href="#proyek" onclick="closeMenu()">Proyek</a>
-        <a href="#kontak" onclick="closeMenu()">Kontak</a>
+  <!-- NAVBAR -->
+  <header class="nav-wrap">
+    <div class="container nav">
+      <div class="brand">
+        <img src="logo-placeholder.png" alt="Logo" class="logo">
+        <span class="brand-text">SKY UTAMA KONTRAKTOR</span>
       </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#services">Layanan</a>
+        <a href="#projects">Proyek</a>
+        <a href="#contact">Kontak</a>
+        <button class="btn btn-primary hidden-sm" id="ctaTop">Hubungi Kami</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Buka menu"><i class="fa fa-bars"></i></button>
     </div>
   </header>
 
-  <!-- Beranda -->
-  <section id="beranda" class="section">
-    <h1>Selamat Datang di Sky Utama Kontraktor</h1>
-    <p>Solusi terpercaya untuk proyek konstruksi Anda.</p>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-left">
+        <h1>Melayani Jasa <span class="accent">Injeksi Beton</span> dan Jasa Kontraktor Bangunan</h1>
+        <p class="lead">Kami membantu merancang, mengimplementasikan, dan mengoptimalkan Rumah anda — dari perencanaan proyek sampai eksekusi di lapangan.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Mulai Konsultasi</a>
+          <a href="#projects" class="btn btn-outline">Lihat Proyek</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="card-stacked">
+          <img src="hero-illustration-placeholder.jpg" alt="Ilustrasi" class="hero-img">
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Layanan -->
-  <section id="layanan" class="section">
-    <h2>Layanan Kami</h2>
-    <p>Kami menyediakan layanan konstruksi, renovasi, dan perencanaan bangunan profesional.</p>
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="container split">
+      <div>
+        <h2>Tentang Kami</h2>
+        <p>Kami adalah perusahaan jasa kontraktor yang berfokus pada pembangunan rumah, renovasi, serta pekerjaan injeksi beton untuk perbaikan struktur. Dengan tenaga ahli berpengalaman dan komitmen terhadap kualitas, kami menghadirkan solusi konstruksi yang kuat, presisi, dan tahan lama..</p>
+        <ul class="about-list">
+          <li><i class="fa fa-check-circle"></i> Pengalaman teknis mendalam</li>
+          <li><i class="fa fa-check-circle"></i> Manajemen proyek yang terstruktur</li>
+          <li><i class="fa fa-check-circle"></i> Komitmen terhadap keselamatan dan kualitas</li>
+        </ul>
+      </div>
+      <div>
+        <div class="stats">
+          <div class="stat">
+            <h3>120+</h3>
+            <p>Proyek Selesai</p>
+          </div>
+          <div class="stat">
+            <h3>15+</h3>
+            <p>Tahun Pengalaman</p>
+          </div>
+          <div class="stat">
+            <h3>90%</h3>
+            <p>Tingkat Kepuasan</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Proyek -->
-  <section id="proyek" class="section">
-    <h2>Proyek Terbaru</h2>
-    <p>Beberapa proyek unggulan yang telah kami selesaikan dengan hasil memuaskan.</p>
+  <!-- SERVICES -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2>Layanan Kami</h2>
+      <div class="cards">
+        <article class="card">
+          <i class="fa fa-hard-hat card-icon"></i>
+          <h4>Injeksi Beton (Concrete Injection)</h4>
+          <p>Perbaikan retakan beton, Injeksi Waterproofing, Grouting untuk pondasi dan struktur bawah tanah.</p>
+        </article>
+        <article class="card">
+          <i class="fa fa-hard-hat card-icon"></i>
+          <h4>Pembangunan Rumah Tinggal</h4>
+          <p>Pembangunan rumah baru, Renovasi & perluasan, Desain dan perencanaan arsitektur.</p>
+        </article>
+        <article class="card">
+          <i class="fa fa-hard-hat card-icon"></i>
+          <h4>Pembangunan Gedung dan Kantor</h4>
+          <p>Pembangunan gedung bertingkat, kantor dan ruko.</p>
+        </article>
+        <article class="card">
+          <i class="fa fa-drafting-compass card-icon"></i>
+          <h4>Konsultasi Teknis</h4>
+          <p>Konsultasi implementasi teknologi dan efisiensi operasi.</p>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <!-- Kontak -->
-  <section id="kontak" class="section">
-    <h2>Hubungi Kami</h2>
-    <form action="https://formspree.io/f/yourFormID" method="POST">
-      <label>Nama</label>
-      <input type="text" name="nama" required>
-
-      <label>Email</label>
-      <input type="email" name="email" required>
-
-      <label>Pesan</label>
-      <textarea name="pesan" required></textarea>
-
-      <button type="submit" class="btn">Kirim</button>
-    </form>
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2>Proyek Unggulan</h2>
+      <div class="project-grid">
+        <figure class="project">
+          <img src="proj1.jpg" alt="Proyek 1">
+          <figcaption>
+            <h4>Revitalisasi Pabrik A</h4>
+            <p>Upgrade sistem produksi, meningkatkan kapasitas 30%.</p>
+          </figcaption>
+        </figure>
+        <figure class="project">
+          <img src="proj2.jpg" alt="Proyek 2">
+          <figcaption>
+            <h4>Implementasi K3 Lapangan</h4>
+            <p>Program K3 terstruktur untuk operasional tambang.</p>
+          </figcaption>
+        </figure>
+        <figure class="project">
+          <img src="proj3.jpg" alt="Proyek 3">
+          <figcaption>
+            <h4>Optimasi Energi</h4>
+            <p>Audit energi & solusi efisiensi untuk pabrik manufaktur.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="center"><a href="#contact" class="btn btn-outline">Minta Studi Kasus</a></div>
+    </div>
   </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container split">
+      <div>
+        <h2>Hubungi Kami</h2>
+        <p>Kirim detail kebutuhan Anda, tim kami akan menghubungi untuk jadwal konsultasi.</p>
+        <form id="contactForm">
+          <div class="form-row">
+            <input type="text" id="name" placeholder="Nama" required>
+            <input type="email" id="email" placeholder="Email" required>
+          </div>
+          <textarea id="message" rows="5" placeholder="Pesan / Kebutuhan" required></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Kirim</button>
+            <button type="button" class="btn btn-ghost" id="clearBtn">Bersihkan</button>
+          </div>
+          <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name    = strip_tags($_POST["name"]);
+    $email   = strip_tags($_POST["email"]);
+    $message = strip_tags($_POST["message"]);
+
+    $to      = "elsanurrahmawati2@gmail.com"; // 
+    $subject = "Pesan Baru dari Website";
+    $body    = "Nama: $name\nEmail: $email\nPesan:\n$message";
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Pesan berhasil dikirim.";
+    } else {
+        echo "Gagal mengirim pesan.";
+    }
+}
+?>
+        </form>
+      </div>
+      <div>
+        <div class="contact-card">
+          <h3>Alamat Kantor</h3>
+          <p>Jl. Contoh No. 123, Kota — Indonesia</p>
+          <p><strong>Telp:</strong> +62 812 3456 7890</p>
+          <p><strong>Email:</strong> info@perusahaan.com</p>
+          <div class="socials">
+            <a href="#" aria-label="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="#" aria-label="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" aria-label="facebook"><i class="fa fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Perusahaan Tuan</strong>
+        <p>Solusi industri & teknologi untuk masa depan yang lebih produktif.</p>
+      </div>
+      <div>
+        <h4>Link</h4>
+        <nav class="footer-links">
+          <a href="#about">Tentang</a>
+          <a href="#services">Layanan</a>
+          <a href="#projects">Proyek</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Hak</h4>
+        <p>&copy; <span id="year"></span> Perusahaan Tuan. Semua hak cipta.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

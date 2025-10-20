@@ -160,6 +160,24 @@
             <button type="submit" class="btn btn-primary">Kirim</button>
             <button type="button" class="btn btn-ghost" id="clearBtn">Bersihkan</button>
           </div>
+          <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name    = strip_tags($_POST["name"]);
+    $email   = strip_tags($_POST["email"]);
+    $message = strip_tags($_POST["message"]);
+
+    $to      = "email_tuan@domain.com"; // ganti dengan email Tuan
+    $subject = "Pesan Baru dari Website";
+    $body    = "Nama: $name\nEmail: $email\nPesan:\n$message";
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Pesan berhasil dikirim.";
+    } else {
+        echo "Gagal mengirim pesan.";
+    }
+}
+?>
         </form>
       </div>
       <div>
@@ -205,6 +223,3 @@
 </body>
 </html>
 
-
-
-tolong buatkan style.css dan sript.js untuk index ini

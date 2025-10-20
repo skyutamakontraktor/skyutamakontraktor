@@ -1,9 +1,20 @@
-function toggleMenu() {
-  const menu = document.getElementById("navMenu");
-  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+// Navbar Toggle (Hamburger)
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Clear form button
+const clearBtn = document.getElementById('clearBtn');
+const contactForm = document.getElementById('contactForm');
+
+if (clearBtn && contactForm) {
+  clearBtn.addEventListener('click', () => {
+    contactForm.reset();
+  });
 }
 
-function closeMenu() {
-  const menu = document.getElementById("navMenu");
-  if (window.innerWidth < 768) menu.style.display = "none";
-}
+// Year auto update
+document.getElementById('year').textContent = new Date().getFullYear();

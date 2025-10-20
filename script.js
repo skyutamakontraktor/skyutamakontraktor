@@ -22,3 +22,18 @@ form.addEventListener('submit', (e) => {
 clearBtn.addEventListener('click', () => {
   form.reset();
 });
+
+// MENU BUTTON NAVIGATION
+const menuBtn = document.getElementById('menuBtn');
+const dropdownNav = document.getElementById('dropdownNav');
+
+menuBtn.addEventListener('click', () => {
+  dropdownNav.classList.toggle('show');
+});
+
+// Auto close dropdown after click
+document.querySelectorAll('.dropdown-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    dropdownNav.classList.remove('show');
+  });
+});
